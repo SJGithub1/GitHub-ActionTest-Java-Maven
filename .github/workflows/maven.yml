@@ -31,6 +31,12 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+
+    - name: Install Google Chrome 
+      run: |
+              chmod +x ./scripts/InstallChrome.sh
+                          ./scripts/InstallChrome.sh
+        
     - name: Run Test
       run: mvn clean test -Dsurefire.suiteXmlFiles=testng.xml
 
